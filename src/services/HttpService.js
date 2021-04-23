@@ -1,6 +1,8 @@
 import axios from "axios";
 import UserService from "./UserService";
 
+axios.defaults.baseURL = "http://localhost:8081/";
+
 const HttpMethods = {
   GET: 'GET',
   POST: 'POST',

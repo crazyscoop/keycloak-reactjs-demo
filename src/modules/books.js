@@ -22,7 +22,7 @@ export const allBooks = () => ({
   type: LIST_BOOKS,
   payload: {
     request: {
-      url: '/demo/books',
+      url: '/bookStore/books',
     },
   },
 });
@@ -33,7 +33,7 @@ export const addBook = book => {
     type: ADD_BOOK,
     payload: {
       request: {
-        url: '/demo/books',
+        url: '/bookStore/books',
         method: HttpService.HttpMethods.POST,
         data: book,
       },
@@ -52,7 +52,7 @@ export const deleteBook = book => {
     type: DELETE_BOOK,
     payload: {
       request: {
-        url: `/demo/books/${book.id}`,
+        url: `/bookStore/books/${book.id}`,
         method: HttpService.HttpMethods.DELETE,
       },
       options: {

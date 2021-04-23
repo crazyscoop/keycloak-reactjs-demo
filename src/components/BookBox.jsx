@@ -36,7 +36,7 @@ export default function BookBox() {
           <h1>Best Books ever!</h1>
           <hr/>
           <BookList books={books} onBookDelete={(book) => dispatch(deleteBook(book))}/>
-          <RenderOnRole roles={['user']}>
+          <RenderOnRole roles={['READ_USER',"WRITE_USER"]}>
             <BookForm onBookSubmit={(book) => dispatch(addBook(book))}/>
           </RenderOnRole>
         </div>
